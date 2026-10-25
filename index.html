@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f3ee" />
+    <meta name="description" content="ارائه دانشگاهی مستندسازی نرم‌افزار و نوشتن README استاندارد با Markdown" />
+    <title>مستندسازی نرم‌افزار | آموزش README و Markdown</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="presentation-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="شروع ارائه" id="brandHome">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span class="brand-copy">
+            <strong>روش تحقیق و گزارش‌نویسی</strong>
+            <small>مستندسازی نرم‌افزار و README</small>
+          </span>
+        </a>
+        <div class="topbar-center">
+          <span class="section-label" id="sectionLabel">مقدمه و مسئله</span>
+          <span class="slide-counter" id="slideCounter">۱ / ۲۰</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" id="notesToggle" type="button" aria-pressed="false" aria-controls="notesPanel" title="یادداشت ارائه‌دهنده">
+            <span aria-hidden="true">▤</span><span class="button-label">یادداشت‌ها</span>
+          </button>
+          <button class="icon-button" id="fullscreenBtn" type="button" title="نمایش تمام‌صفحه">
+            <span aria-hidden="true">⛶</span><span class="button-label">تمام‌صفحه</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="overall-progress" aria-label="پیشرفت ارائه">
+        <div class="overall-progress-fill" id="overallProgressFill"></div>
+      </div>
+
+      <main class="workspace" id="workspace">
+        <section class="stage-wrap" aria-label="اسلاید ارائه">
+          <div class="slide-stage" id="slideStage">
+            <div id="slideRoot" class="slide-root" aria-live="polite" aria-atomic="true"></div>
+          </div>
+          <div class="stage-caption">
+            <span id="slideTopic">مستندسازی نرم‌افزار</span>
+            <span class="caption-separator" aria-hidden="true">•</span>
+            <span id="durationCaption">زمان پیشنهادی: ۳۰ ثانیه</span>
+          </div>
+        </section>
+
+        <aside class="notes-panel" id="notesPanel" hidden aria-label="یادداشت ارائه‌دهنده">
+          <div class="notes-heading">
+            <div>
+              <span class="eyebrow">SPEAKER NOTES</span>
+              <h2>یادداشت ارائه‌دهنده</h2>
+            </div>
+            <button type="button" class="close-notes" id="notesClose" aria-label="بستن یادداشت‌ها">×</button>
+          </div>
+          <div id="notesContent" class="notes-content"></div>
+          <div id="notesSources" class="notes-sources"></div>
+        </aside>
+      </main>
+
+      <footer class="controlbar">
+        <div class="control-group navigation-controls">
+          <button class="control-button secondary" id="prevBtn" type="button" aria-label="اسلاید قبلی">→ قبلی</button>
+          <button class="control-button primary" id="playPauseBtn" type="button" aria-pressed="false">
+            <span id="playPauseIcon" aria-hidden="true">▶</span><span id="playPauseText">شروع زمان‌سنج</span>
+          </button>
+          <button class="control-button secondary" id="nextBtn" type="button" aria-label="اسلاید بعدی">بعدی ←</button>
+        </div>
+
+        <div class="timer-cluster" aria-label="زمان‌سنج‌ها">
+          <div class="timer-item">
+            <span class="timer-label">زمان کل باقی‌مانده</span>
+            <strong id="totalTimer">۲۰:۰۰</strong>
+          </div>
+          <span class="timer-divider" aria-hidden="true"></span>
+          <div class="timer-item">
+            <span class="timer-label">زمان این اسلاید</span>
+            <strong id="slideTimer">۰۰:۳۰</strong>
+          </div>
+        </div>
+
+        <div class="control-group utility-controls">
+          <button class="control-button subtle" id="resetBtn" type="button" title="بازنشانی زمان‌ها و شروع از ابتدا">بازنشانی</button>
+          <button class="control-button subtle" id="endBtn" type="button">پایان</button>
+        </div>
+      </footer>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </div>
+
+    <script src="assets/js/slides.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
